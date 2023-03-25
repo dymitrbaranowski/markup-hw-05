@@ -236,7 +236,7 @@ a {
   display: inline-block;
   padding: 16px 32px;
   margin-top: 48px;
-  margin-bottom: ;
+  transition-duration: 250ms ;
 }
 
 .hero {
@@ -446,6 +446,8 @@ Our advantages*/
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
 }
 
 .team-social-link:hover,
@@ -489,10 +491,13 @@ Our advantages*/
   width: 100%;
   height: 100%;
   border: 1px solid var(--Subtle-Text);
-  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
   padding: 16px 32px;
   color: #8e8f99;
+  transition-property: background-color, fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -574,6 +579,9 @@ Our advantages*/
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foter-soc-link:hover,
@@ -619,10 +627,38 @@ Our advantages*/
 
 .benefits-container {
 }
-.benefits-item {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+.benefits-top-wrap {
+  position: relative;
+  overflow: hidden;
+  
 }
+.advantages-list {
+ 
+}
+.benefits-cover-box {
+  position: absolute;
+  background: #4D5AE5;
+  height: 100%;
+  transition: transform 250ms linear;
+}
+.benefits-cover-text {
+ 
+ padding: 40px 32px ;
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 1.5;
+ letter-spacing: 0.02em;
+ color: var(--Light);
+ 
+}
+
+.advantages-list:hover .benefits-cover-box {
+  transform: translatey(-100%);
+}
+
 .advantages-list-btn {
   display: flex;
   justify-content: center;
@@ -686,6 +722,22 @@ Our advantages*/
   background-color: var(--Accent);
  }
  */
+
+.button.primary {
+  color: var(--Primary-Brand);
+  background-color: var(--Light);
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+  flex: none;
+  flex-grow: 0;
+  max-width: 116px;
+  font-family: inherit;
+  font-size: 16px;
+  transition-property: color, background-color, box-shadow, border, outline;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .button.primary:hover,
 .button.primary:focus {
   color: var(--B-g-color);
@@ -698,18 +750,12 @@ Our advantages*/
 .button.primary:active {
   color: var(--B-g-color);
   background-color: var(--Pressed-state);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--Primary-Brand);
+    outline: var(--Primary-Brand);
 }
-.button.primary {
-  color: var(--Primary-Brand);
-  background-color: var(--Light);
-  border: 1px solid #e7e9fc;
-  border-radius: 4px;
-  flex: none;
-  flex-grow: 0;
-  max-width: 116px;
-  font-family: inherit;
-  font-size: 16px;
-}
+
 .button.secondary {
   color: var(--B-g-color);
   background-color: var(--Primary-Brand);
@@ -719,10 +765,64 @@ Our advantages*/
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: transparent;
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
   color: var(--B-g-color);
   background-color: var(--Pressed-state);
+  
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);;
+}
+.modal {
+
+  background-color: #FCFCFC;
+  position: absolute;
+  transform: translate(-50%,-50%) ;
+  width: 408px;
+  min-height: 576px;
+  left:50%;
+  top: 50%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 24px;
+  
+}
+ 
+.button-close {
+  
+ border: 1px solid rgba(0, 0, 0, 0.1);
+ display: block;
+  margin-left: auto;
+  border-radius: 50%;
+  padding: 0px 6px 2px 6px;
+ 
+
+}
+.modal-close {
+  
+  width: 8px;
+  height: 8px;
+  fill:var(--Text);
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+ 
+  
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+ 
 }

@@ -805,7 +805,7 @@ Our advantages*/
 .modal {
   background-color: #fcfcfc;
   position: absolute;
-  transform: translate(-50%, -50%) scale (0);
+  transform: translate(-50%, -50%) ;
   width: 408px;
   min-height: 576px;
   left: 50%;
@@ -817,9 +817,7 @@ Our advantages*/
   transition: transform 250ms linear;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%); scale (0);
-} 
+
 
 .button-close {
   border: 1px solid rgba(0, 0, 0, 0.1);

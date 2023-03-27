@@ -142,7 +142,6 @@ a {
 .site-nav :hover,
 .site-nav :focus {
   color: var(--Pressed-state);
-
 }
 .site-nav :active {
   color: var(--Pressed-state);
@@ -158,7 +157,6 @@ a {
 
 .link-current-box {
   display: flex;
-
 }
 .link-current-box::after {
   content: '';
@@ -181,9 +179,8 @@ a {
 }
 
 .link-studio:hover,
-.link-studio:focus  {
+.link-studio:focus {
   color: var(--Pressed-state);
- 
 }
 .link {
   text-decoration: none;
@@ -261,7 +258,7 @@ a {
   display: inline-block;
   padding: 16px 32px;
   margin-top: 48px;
-  transition-duration: 250ms ;
+  transition-duration: 250ms;
 }
 
 .hero {
@@ -656,28 +653,24 @@ Our advantages*/
 .benefits-top-wrap {
   position: relative;
   overflow: hidden;
-  
 }
 .advantages-list {
- 
 }
 .benefits-cover-box {
   position: absolute;
-  background: #4D5AE5;
+  background: #4d5ae5;
   height: 100%;
   transition: transform 250ms linear;
 }
 .benefits-cover-text {
- 
- padding: 40px 32px ;
- font-family: 'Roboto';
- font-style: normal;
- font-weight: 400;
- font-size: 16px;
- line-height: 1.5;
- letter-spacing: 0.02em;
- color: var(--Light);
- 
+  padding: 40px 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--Light);
 }
 
 .advantages-list:hover .benefits-cover-box {
@@ -769,16 +762,16 @@ Our advantages*/
   background-color: var(--Primary-Brand);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    border: 1px solid var(--Primary-Brand);
-    outline: var(--Primary-Brand);
+  border: 1px solid var(--Primary-Brand);
+  outline: var(--Primary-Brand);
 }
 .button.primary:active {
   color: var(--B-g-color);
   background-color: var(--Pressed-state);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    border: 1px solid var(--Primary-Brand);
-    outline: var(--Primary-Brand);
+  border: 1px solid var(--Primary-Brand);
+  outline: var(--Primary-Brand);
 }
 
 .button.secondary {
@@ -799,7 +792,6 @@ Our advantages*/
 .button.secondary:focus {
   color: var(--B-g-color);
   background-color: var(--Pressed-state);
-  
 }
 
 .backdrop {
@@ -808,46 +800,48 @@ Our advantages*/
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+  transition: opasity 250ms linear, visibility 250ms linear;
 }
 .modal {
-
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   position: absolute;
-  transform: translate(-50%,-50%) ;
+  transform: translate(-50%, -50%) scale (0);
   width: 408px;
   min-height: 576px;
-  left:50%;
+  left: 50%;
   top: 50%;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 24px;
-  
+  transition: transform 250ms linear;
 }
- 
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%); scale (0);
+} 
+
 .button-close {
-  
- border: 1px solid rgba(0, 0, 0, 0.1);
- display: block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
   margin-left: auto;
   border-radius: 50%;
   padding: 0px 6px 2px 6px;
- 
-
 }
 .modal-close {
-  
   width: 8px;
   height: 8px;
-  fill:var(--Text);
+  fill: var(--Text);
   display: inline-flex;
   justify-content: center;
   align-content: center;
- 
-  
 }
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
- 
+}
+
+.no-scroll {
+  overflow: hidden;
 }

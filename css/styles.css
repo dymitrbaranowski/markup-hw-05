@@ -153,10 +153,35 @@ a {
 
 .link-studio {
   color: var(--Dark);
+  padding: 24px 0 24px;
 }
 
-.link-studio :hover,
-.link-studio :focus {
+.link-current-box {
+  display: flex;
+
+}
+.link-current-box::after {
+  content: '';
+  width: 48px;
+  height: 4px;
+  position: absolute;
+  top: 68px;
+  border-radius: 2px;
+  background-color: var(--Pressed-state);
+}
+
+.link-portfolio-box::after {
+  content: '';
+  width: 66px;
+  height: 4px;
+  position: absolute;
+  top: 68px;
+  border-radius: 2px;
+  background-color: var(--Pressed-state);
+}
+
+.link-studio:hover,
+.link-studio:focus  {
   color: var(--Pressed-state);
  
 }

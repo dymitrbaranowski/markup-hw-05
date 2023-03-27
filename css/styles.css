@@ -524,7 +524,7 @@ Our advantages*/
 
 .customers-link:hover,
 .customers-link:focus {
-  background-color: var(--B-g-color);
+  
   fill: var(--Pressed-state);
   color: var(--Pressed-state);
   border: 1px solid var(--Pressed-state);
@@ -674,6 +674,9 @@ Our advantages*/
 }
 
 .advantages-list:hover .benefits-cover-box {
+  transform: translatey(-100%);
+}
+.advantages-list:focus .benefits-cover-box {
   transform: translatey(-100%);
 }
 

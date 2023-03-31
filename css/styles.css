@@ -517,14 +517,14 @@ Our advantages*/
   border-radius: 4px;
   padding: 16px 32px;
   color: #8e8f99;
-  transition-property: background-color, fill, border;
+  transition-property: background-color, color, fill, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
 .customers-link:focus {
-  
+   background-color: var(--B-g-color);
   fill: var(--Pressed-state);
   color: var(--Pressed-state);
   border: 1px solid var(--Pressed-state);
@@ -797,6 +797,8 @@ Our advantages*/
   background-color: var(--Pressed-state);
 }
 
+/* -----Modal--------*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -831,6 +833,7 @@ Our advantages*/
   border-radius: 50%;
   padding: 0px 6px 2px 6px;
   transition: transform 250ms linear ;
+  margin-bottom: 24px;
 }
 
 .modal-close {
@@ -852,4 +855,31 @@ Our advantages*/
 
 .no-scroll {
   overflow: hidden;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--Dark);
+  margin-bottom: 34px;
+}
+
+.modal-form {
+
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #4D5AE5;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  padding-left: 16px;
+}
+
+. {
+  
 }

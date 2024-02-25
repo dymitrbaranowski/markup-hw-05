@@ -18,30 +18,32 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!--site header-->
+    <!--site header--Site-Nav-->
     <header class="page-header">
       <div class="container header-container">
-        <nav class="site-logo nav-container">
-          <a href="./index.html" class="logo link"
-            >Web<span class="accent">Studio</span></a
+        <nav class="header-nav">
+          <a href="./index.html" class="site-logo logo link"
+            >Web<span class="header-accent">Studio</span></a
           >
-          <ul class="site-nav nav-list list">
-            <li>
-             <div class="link-current-box">
-               <a href="./index.html" class="link-current link-studio link"
+          <ul class="nav-list list">
+            <li class="link-current-box">
+              <a
+                href="./index.html"
+                class="link-current current-link header-link link"
                 >Studio</a
               >
-             </div>
             </li>
 
-            <li>
-              <a href="./portfolio.html" class="link-studio link">Portfolio</a>
+            <li class="link-current-box">
+              <a href="./portfolio.html" class="header-link link">Portfolio</a>
             </li>
 
-            <li><a href="" class="link-studio link">Contacts</a></li>
+            <li class="link-current-box">
+              <a href="" class="header-link link">Contacts</a>
+            </li>
           </ul>
         </nav>
-
+        <!-- Site Address -->
         <address class="auth-nav">
           <ul class="auth-nav list">
             <li>
@@ -68,7 +70,11 @@
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button"  class="button secondary hero-link" data-modal-open>
+          <button
+            type="button"
+            class="button secondary hero-link"
+            data-modal-open
+          >
             Order Service
           </button>
         </div>
@@ -335,7 +341,7 @@
       </section>
 
       <!--   Customers  -->
-      
+
       <section class="section customers-container">
         <div class="container">
           <h2 class="team-title">Customers</h2>
@@ -434,22 +440,27 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop " data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button"   class="button-close" data-modal-close>
+        <button type="button" class="button-close" data-modal-close>
           <svg width="24" height="24" class="modal-close">
-           <use href="./images/icons.svg#icon-close"></use>
+            <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-form">
-          <input type="text" class="modal-input" placeholder="Enter Your name" name="Name"/>
-          <input type="text" class="modal-input" name="Phon"/>
-          <input type="text" class="modal-input" name="Email"/>
+          <input
+            type="text"
+            class="modal-input"
+            placeholder="Enter Your name"
+            name="Name"
+          />
+          <input type="text" class="modal-input" name="Phon" />
+          <input type="text" class="modal-input" name="Email" />
           <button type="submit">Send</button>
         </form>
       </div>
     </div>
-     <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -50,67 +50,58 @@ button {
 }
 
 .link {
-  display: block;
+  text-decoration: none;
 }
-/*
-ul {
-  list-style: none;
-}*/
 
 .list {
   list-style: none;
 }
-/*
-a {
-  text-decoration: none;
-}
-*/
+
 /* Site nav*/
 
 .container {
   width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
+  outline-color: red;
+  outline-width: 2px;
+  outline-style: groove;
 }
 
 .header-container {
+  display: flex;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+/* .header-container {
   display: flex;
   align-items: center;
   height: 72px;
   left: 0px;
   top: 0px;
   border-bottom: 1px solid --Accent;
-}
+} */
+
+/* --------Header ---------*/
 
 .page-header {
   border-bottom: 1px solid var(--Accent);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-.site-logo {
+  min-width: 1158px;
 }
 
-.nav-container {
-  display: flex;
-}
-.site-nav a {
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--Dark);
-  display: flex;
-}
-.nav-list {
+.site-logo {
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-left: 76px;
 }
 
-.site-nav.list {
-  display: flex;
-  gap: 40px;
-}
-
-.site-logo .logo {
+.logo {
+  color: var(--Primary-Brand);
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -121,19 +112,39 @@ a {
   text-transform: uppercase;
 }
 
-.footer .accent {
-  color: var(--Light);
+.header-accent {
+  color: var(--Dark);
 }
-.logo {
-  color: var(--Primary-Brand);
-  text-decoration: none;
+
+.header-link {
+  color: var(--Dark);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   padding-top: 24px;
   padding-bottom: 24px;
 }
+/* .nav-container {
+  display: flex;
+} */
 
-.logo-name {
-  color: var(--Dark);
+.nav-list {
+  display: flex;
+  gap: 40px;
+  margin-left: 76px;
 }
+
+.nav-list :hover,
+.nav-list :focus {
+  color: var(--Pressed-state);
+}
+.nav-list :active {
+  color: var(--Pressed-state);
+}
+.nav-list .link-current {
+  color: var(--Primary-Brand);
+}
+
 .site-nav a {
   color: var(--Dark);
   text-decoration: none;
@@ -148,11 +159,6 @@ a {
 }
 .site-nav .link-current {
   color: var(--Primary-Brand);
-}
-
-.link-studio {
-  color: var(--Dark);
-  padding: 24px 0 24px;
 }
 
 .link-current-box {
@@ -350,8 +356,6 @@ Our advantages*/
   line-height: 1.07;
 }
 
-.
-
 /* Site sectin What are we doing*/
 
 .section-title {
@@ -524,7 +528,7 @@ Our advantages*/
 
 .customers-link:hover,
 .customers-link:focus {
-   background-color: var(--B-g-color);
+  background-color: var(--B-g-color);
   fill: var(--Pressed-state);
   color: var(--Pressed-state);
   border: 1px solid var(--Pressed-state);
@@ -805,7 +809,8 @@ Our advantages*/
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms linear, visibility 250ms linear, transform 250ms linear;
+  transition: opacity 250ms linear, visibility 250ms linear,
+    transform 250ms linear;
 }
 .modal {
   background-color: #fcfcfc;
@@ -821,10 +826,9 @@ Our advantages*/
   padding: 24px;
   transition: transform 250ms linear;
 }
-.backdrop.is-hidden .modal  {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, 50%) scaleY(2);
 }
-
 
 .button-close {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -832,7 +836,7 @@ Our advantages*/
   margin-left: auto;
   border-radius: 50%;
   padding: 0px 6px 2px 6px;
-  transition: transform 250ms linear ;
+  transition: transform 250ms linear;
   margin-bottom: 24px;
 }
 
@@ -843,14 +847,12 @@ Our advantages*/
   display: inline-flex;
   justify-content: center;
   align-content: center;
-;
 }
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  
 }
 
 .no-scroll {
@@ -868,19 +870,16 @@ Our advantages*/
 }
 
 .modal-form {
-
 }
 
 .modal-input {
   width: 100%;
   height: 40px;
-  border: 1px solid #4D5AE5;
+  border: 1px solid #4d5ae5;
   border-radius: 4px;
   margin-bottom: 24px;
   padding-left: 16px;
-  
 }
 
 . {
-  
 }

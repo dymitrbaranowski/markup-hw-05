@@ -72,27 +72,18 @@ button {
   display: flex;
 }
 
-.header-nav {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-}
-
-/* .header-container {
-  display: flex;
-  align-items: center;
-  height: 72px;
-  left: 0px;
-  top: 0px;
-  border-bottom: 1px solid --Accent;
-} */
-
 /* --------Header ---------*/
 
 .page-header {
   border-bottom: 1px solid var(--Accent);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   min-width: 1158px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 
 .site-logo {
@@ -116,18 +107,6 @@ button {
   color: var(--Dark);
 }
 
-.header-link {
-  color: var(--Dark);
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-/* .nav-container {
-  display: flex;
-} */
-
 .nav-list {
   display: flex;
   gap: 40px;
@@ -145,65 +124,40 @@ button {
   color: var(--Primary-Brand);
 }
 
-.site-nav a {
-  color: var(--Dark);
-  text-decoration: none;
-}
-
-.site-nav :hover,
-.site-nav :focus {
-  color: var(--Pressed-state);
-}
-.site-nav :active {
-  color: var(--Pressed-state);
-}
-.site-nav .link-current {
-  color: var(--Primary-Brand);
-}
-
 .link-current-box {
-  display: flex;
+  position: relative;
 }
-.link-current-box::after {
+
+.header-link {
+  color: var(--Dark);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.portfolio.current-elem::after {
+  width: 66px;
+}
+.current-elem::after {
   content: '';
   width: 48px;
   height: 4px;
   position: absolute;
-  top: 68px;
+  top: 44px;
+  left: 0px;
   border-radius: 2px;
   background-color: var(--Pressed-state);
 }
 
-.link-portfolio-box::after {
-  content: '';
-  width: 66px;
-  height: 4px;
-  position: absolute;
-  top: 68px;
-  border-radius: 2px;
-  background-color: var(--Pressed-state);
-}
-
-.link-studio:hover,
-.link-studio:focus {
-  color: var(--Pressed-state);
-}
-.link {
-  text-decoration: none;
-}
-
-.accent {
-  color: var(--Dark);
-}
 /* Site address */
 
 .auth-nav {
-  font-style: normal;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  list-style: none;
   display: flex;
-  margin-left: auto;
+  gap: 40px;
 }
 
 .contact-item {
@@ -211,17 +165,8 @@ button {
   letter-spacing: 0.02em;
   color: var(--Text);
   display: block;
-}
-
-.mail-link {
   padding-top: 24px;
   padding-bottom: 24px;
-}
-
-.tel-link {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-left: 40px;
 }
 
 .auth-nav a {
@@ -238,36 +183,10 @@ button {
 }
 
 /* Site hero*/
-.hero-title {
-  color: var(--B-g-color);
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
-  min-width: 496px;
-  width: 496px;
-  height: 120px;
-  margin: 0 auto;
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 60px;
-}
 
-.hero-link {
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  display: inline-block;
-  padding: 16px 32px;
-  margin-top: 48px;
-  transition-duration: 250ms;
-}
-
-.hero {
+.hero-container {
+  padding-top: 188px;
+  padding-bottom: 188px;
   max-width: 1440px;
   margin: 0 auto;
   background-color: var(--Dark);
@@ -282,9 +201,29 @@ button {
   text-align: center;
 }
 
-.hero-container {
-  padding-top: 188px;
-  padding-bottom: 188px;
+.hero-title {
+  color: var(--B-g-color);
+  min-width: 496px;
+  width: 496px;
+  height: 120px;
+  margin: 0 auto;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.hero-link {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  padding: 16px 32px;
+  margin-top: 48px;
+  transition-duration: 250ms;
 }
 
 /* S
@@ -541,15 +480,7 @@ Our advantages*/
 
 .footer {
   background-color: var(--Dark);
-  padding: 100px;
-}
-
-.footer-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--Accent);
-  margin-top: 16px;
-  width: 264px;
+  min-width: 1158px;
 }
 
 .logo-footer {
@@ -565,31 +496,38 @@ Our advantages*/
   text-decoration: none;
 }
 
+.accent {
+  color: var(--Light);
+}
+
 .footer-container {
   display: flex;
+  padding: 100px;
+}
+
+.footer-text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--Accent);
+  margin-top: 16px;
+  width: 264px;
 }
 
 .footer-soc-media {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
   margin-left: 120px;
 }
+
 .footer-soc-title {
-  display: inline-block;
-  font-family: 'Roboto';
-  font-style: normal;
+  color: rgba(255, 255, 255, 1);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 1);
   margin-bottom: 16px;
 }
 
 .footer-soc-list {
   display: flex;
-  justify-content: center;
   gap: 16px;
 }
 
@@ -597,6 +535,7 @@ Our advantages*/
   width: 40px;
   height: 40px;
 }
+
 .foter-soc-link {
   width: 100%;
   height: 100%;
@@ -615,28 +554,40 @@ Our advantages*/
   background-color: var(--Success);
 }
 
-.footer-soc-icon {
-  fill: var(--B-g-color);
-}
-
 /* Portflio.html */
 
-.advantages-link {
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-}
 /* Site Advantages */
 
 .benefits-advantages-container {
   padding-top: 96px;
   padding-bottom: 66px;
+}
+
+.advantages-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 66px;
+}
+
+.advantages-list-btn {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.advantages-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  max-height: 48px;
+}
+
+.advantages-list-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .benefits-description {
@@ -645,21 +596,12 @@ Our advantages*/
   border-right: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
 }
-.advantages-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 66px;
-}
-
-.benefits-container {
-}
 
 .benefits-top-wrap {
   position: relative;
   overflow: hidden;
 }
-.advantages-list {
-}
+
 .benefits-cover-box {
   position: absolute;
   background: #4d5ae5;
@@ -684,26 +626,11 @@ Our advantages*/
   transform: translatey(-100%);
 }
 
-.advantages-list-btn {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
 .advantages-link {
-  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
   padding: 12px 24px;
-  max-width: 116px;
   max-height: 48px;
-  background: var(--Light);
-  border: 1px solid #e7e9fc;
-  border-radius: 4px;
-  flex: none;
-  flex-grow: 1;
 }
 
 .advantages-list-benefits {
@@ -758,9 +685,6 @@ Our advantages*/
   max-width: 116px;
   font-family: inherit;
   font-size: 16px;
-  transition-property: color, background-color, box-shadow, border, outline;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.primary:hover,
@@ -773,12 +697,7 @@ Our advantages*/
   outline: var(--Primary-Brand);
 }
 .button.primary:active {
-  color: var(--B-g-color);
   background-color: var(--Pressed-state);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border: 1px solid var(--Primary-Brand);
-  outline: var(--Primary-Brand);
 }
 
 .button.secondary {
@@ -790,14 +709,10 @@ Our advantages*/
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: transparent;
-  transition-property: background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
-  color: var(--B-g-color);
   background-color: var(--Pressed-state);
 }
 

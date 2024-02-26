@@ -214,16 +214,11 @@ button {
 }
 
 .hero-link {
-  cursor: pointer;
-  font-family: inherit;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
-  display: inline-block;
   padding: 16px 32px;
   margin-top: 48px;
-  transition-duration: 250ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* S
@@ -590,13 +585,6 @@ Our advantages*/
   row-gap: 48px;
 }
 
-.benefits-description {
-  padding: 32px 0 32px 16px;
-  border-left: 1px solid #e7e9fc;
-  border-right: 1px solid #e7e9fc;
-  border-bottom: 1px solid #e7e9fc;
-}
-
 .benefits-top-wrap {
   position: relative;
   overflow: hidden;
@@ -606,14 +594,10 @@ Our advantages*/
   position: absolute;
   background: #4d5ae5;
   height: 100%;
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .benefits-cover-text {
   padding: 40px 32px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--Light);
@@ -626,30 +610,18 @@ Our advantages*/
   transform: translatey(-100%);
 }
 
-.advantages-link {
-  display: flex;
-  align-items: center;
-  padding: 12px 24px;
-  max-height: 48px;
-}
-
-.advantages-list-benefits {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 24px;
-  row-gap: 48px;
-}
-
-.advantages-list {
-  text-decoration: none;
-  display: block;
-}
-
-.advantages-list:hover,
-.advantages-list:focus {
+.benefits-description:hover,
+.benefits-description:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.benefits-description {
+  padding: 32px 0 32px 16px;
+  border-left: 1px solid var(--Accent);
+  border-right: 1px solid var(--Accent);
+  border-bottom: 1px solid var(--Accent);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .advantages-title {
@@ -678,7 +650,7 @@ Our advantages*/
 .button.primary {
   color: var(--Primary-Brand);
   background-color: var(--Light);
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--Accent);
   border-radius: 4px;
   flex: none;
   flex-grow: 0;
@@ -769,8 +741,7 @@ Our advantages*/
   visibility: hidden;
   pointer-events: none;
 }
-
-.no-scroll {
+f .no-scroll {
   overflow: hidden;
 }
 
@@ -794,7 +765,4 @@ Our advantages*/
   border-radius: 4px;
   margin-bottom: 24px;
   padding-left: 16px;
-}
-
-. {
 }

@@ -245,10 +245,8 @@ Our advantages*/
   background-color: var(--Light);
   border-radius: 4px;
 }
-.advantages-icon {
-}
 
-.our-advantages-list.list.list {
+.our-advantages-list.list {
   display: flex;
   gap: 24px;
   flex-basis: calc(100% / 4);
@@ -295,21 +293,15 @@ Our advantages*/
   line-height: 1.07;
 }
 
-/* Site sectin What are we doing*/
+/* Site Section What are we doing*/
 
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--Dark);
+.doing-container {
+  width: 1158px;
+  padding-bottom: 120px;
 }
 
 .doing-title {
   color: var(--Dark);
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -318,12 +310,6 @@ Our advantages*/
   margin-bottom: 72px;
 }
 
-.doing-container {
-  width: 1158px;
-  padding-bottom: 120px;
-}
-.doing-section {
-}
 .doing-list {
   display: flex;
   gap: 24px;

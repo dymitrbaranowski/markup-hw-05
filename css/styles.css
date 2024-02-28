@@ -323,14 +323,16 @@ Our advantages*/
   padding-bottom: 120px;
   background-color: var(--Light);
 }
-.section-team {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+
+.team-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
-  color: var(--Dark);
-  margin-bottom: 8px;
+  text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 .team-list {
@@ -338,6 +340,10 @@ Our advantages*/
   gap: 24px;
   justify-content: center;
   flex-basis: calc(100% / 4);
+}
+
+.team-item {
+  padding-top: 72 px;
 }
 
 .team-description {
@@ -357,19 +363,15 @@ Our advantages*/
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.team-item {
-  padding-top: 72 px;
-}
 
-.team-title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
+.section-team {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
-  text-transform: capitalize;
-  margin-bottom: 72px;
+  color: var(--Dark);
+  margin-bottom: 8px;
 }
 
 .team-text {
@@ -469,6 +471,11 @@ Our advantages*/
   min-width: 1158px;
 }
 
+.footer-container {
+  display: flex;
+  padding: 100px;
+}
+
 .logo-footer {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -484,11 +491,6 @@ Our advantages*/
 
 .accent {
   color: var(--Light);
-}
-
-.footer-container {
-  display: flex;
-  padding: 100px;
 }
 
 .footer-text {
